@@ -1,6 +1,8 @@
 # Django Tutorial
 有条件还是直接读官方文档来的更快~
+
 如果django激发起了你自己写下web的动力，那么文档将是你强有力的陪伴
+
 [文档](https://docs.djangoproject.com/en/1.11/)
 ## django structure
 
@@ -97,11 +99,15 @@ class Pic(models.Model):
 举个例子
 
 你想写个博客，那么变量就应该是标题，日期，标签，分类，内容，作者，等等
+
 这时候你需要查阅官方文档中的field类型来选择适应你所想表示的内容的field
+
 例如日期就是 DateTimeField
 
 !!!重要的事
-你需要运行如下命令django才会创建数据库，默认数据库是sqlite3如果你需要改变请在setting中找到相关位置
+你需要运行如下命令django才会创建数据库
+
+默认数据库是sqlite3如果你需要改变请在setting中找到相关位置
 
 ``` shell
 python manager.py makemigrations pic
@@ -124,7 +130,6 @@ urlpatterns = [
 ```
 你需要新导入include 用来包含你app中的url文件
 
-
 改变app/url.py
 
 ``` python
@@ -143,7 +148,9 @@ urlpatterns = [
 url()
 
 这个函数，一个参数是web路由，第二参数是往哪里分发,第三个参数是起的别名
+
 这里的分发在project/urls.py里就是分发到app/urls.py
+
 在app/urls.py中就是分发到views.py中你定义的函数
 
 那么接下来我们就来定义函数
@@ -159,6 +166,7 @@ HttpResponse函数的用法有很多，具体还是得见官方文档
 第一个参数就是响应内容
 
 这样响应出去的就是纯字符串，如果你想用html以及css来包裹住
+
 那么这时候你需要创建一个templates文件夹在你的app目录下
 
 将响应交由templates渲染的方式有多种，具体选择见官网
@@ -176,6 +184,7 @@ return render(request, 'templates_name.html')
 ```
 
 render的第三个参数，接受用来传入templates的内容
+
 例如你创建了一个
 
 `app/templates/index.html`
@@ -235,4 +244,3 @@ def index(request):
 我自己写的练习源码在
 
 [github](https://github.com/C1tas/hack_web)
-
