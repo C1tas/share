@@ -26,3 +26,7 @@ query
 
 grep 提取文件名
 grep -rn "select(" * | cut -d":" -f 1
+
+cat admin| sort |uniq |sort > admin_u
+
+comm -23 select_u admin_u | grep -v -E "tpl.php$|class.php$|func.php|inc.php"
