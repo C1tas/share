@@ -189,7 +189,7 @@ render的第三个参数，接受用来传入templates的内容
 
 `app/templates/index.html`
 
-``` html
+```html
 {% if list %}
     <ul>
     {% for item in pic_list %}
