@@ -18,6 +18,11 @@ exit
 ip routing
 ```
 
+# 三层交换机关闭接口使其可以直接分配ip
+
+```
+no switchport
+```
 # NAT 转发
 
 ## NAT 静态一对一
